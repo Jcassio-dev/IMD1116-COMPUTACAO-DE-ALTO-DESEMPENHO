@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
         double tempo_ilp = t_fim - t_inicio;
 
         fprintf(fp, "%s,%lld,%.6f,%.6f,%.6f\n", opt_level, N, tempo_init, tempo_acum, tempo_ilp);
+        printf("\tN: %9lld | Tempo Acumulativa: %.6fs | Tempo ILP: %.6fs\n", N, tempo_acum, tempo_ilp);
 
         if (soma_dependente == -1.0 && soma_ilp == -1.0) {
             printf("Somas: %f %f\n", soma_dependente, soma_ilp);
